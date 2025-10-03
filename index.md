@@ -10,11 +10,10 @@ Welcome to my portfolio. I specialize in:
 ---
 
 ## 🔹 Featured Projects
-- [Sprocket FEA Simulation](projects/sprocket_analysis.md)  
 - [Fatigue Life Estimation Framework](projects/fatigue_life_estimation.md)  
 - [HyperMesh Automation Scripts](projects/automation_scripts.md)  
 
 ---
 
 📌 **More about me:**  
-[LinkedIn](https://www.linkedin.com/in/YOUR-LINKEDIN) | [GitHub](https://github.com/YOUR-USERNAME)
+[LinkedIn](https://www.linkedin.com/in/Jimit04) | [GitHub](https://github.com/Jimit04)
