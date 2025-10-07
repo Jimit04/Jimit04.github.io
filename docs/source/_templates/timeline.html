@@ -1,0 +1,30 @@
+.. raw:: html
+
+  <section class="timeline">{% for item in experiences %}
+    <div class="timeline-item" onclick="toggleDetails(this)">
+      <div class="timeline-node"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div>
+            <h3>{{ item.title }}</h3>
+            <p class="timeline-company">{{ item.company }}</p>
+          </div>
+          <div class="timeline-meta">
+            <span class="badge badge-primary">{{ item.badge }}</span>
+            <p class="timeline-date">{{ item.date }}</p>
+          </div>
+        </div>
+        <p class="timeline-summary">{{ item.summary }}</p>
+        <div class="timeline-details">
+          <ul>
+            {% for ach in item.achievements %}<li>{{ ach }}</li>{% endfor %}
+          </ul>
+          <div class="tech-badges">
+            {% for t in item.tech %}<span class="tech-badge">{{ t }}</span>{% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>{% endfor %}
+  </section>
+
+

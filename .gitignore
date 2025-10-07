@@ -142,7 +142,6 @@ Thumbs.db
 .sphinx-build
 docs/source/_build/
 docs/build/
-OKComputer_Sphinx profile setup
 
 # Temporary files
 *.tmp

@@ -1,0 +1,28 @@
+categories:
+  - name: CAE Software
+    skills:
+      - {name: ANSYS, level: expert}
+      - {name: HyperMesh, level: advanced}
+      - {name: ABAQUS, level: advanced}
+      - {name: NASTRAN, level: intermediate}
+
+  - name: Programming
+    skills:
+      - {name: Python, level: expert}
+      - {name: TCL, level: advanced}
+      - {name: MATLAB, level: intermediate}
+      - {name: C++, level: intermediate}
+
+  - name: Analysis Types
+    skills:
+      - {name: Structural FEA, level: expert}
+      - {name: MBD, level: advanced}
+      - {name: DEM, level: advanced}
+      - {name: Fatigue Analysis, level: advanced}
+
+  - name: Specialisations
+    skills:
+      - {name: Process Automation, level: expert}
+      - {name: AI/ML Integration, level: advanced}
+      - {name: Team Leadership, level: advanced}
+      - {name: Design Optimization, level: advanced}
