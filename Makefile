@@ -1,52 +1,74 @@
-# ============================================================================
-# Sphinx-friendly Makefile for Jimit Vyas site
-# ============================================================================
+# Makefile for Sphinx documentation
+#
 
-# ---- Config ----------------------------------------------------------------
+# You can set these variables from the command line, and also
+# from the environment for the first two.
 SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = docs/source
-BUILDDIR      = docs/build
-VENV          = .venv
-PYTHON        = $(VENV)/bin/python
-PIP           = $(VENV)/bin/pip
-REQUIREMENTS  = requirements.txt
+SPHINXBUILD  ?= sphinx-build
+SOURCEDIR    = docs/source
+BUILDDIR     = docs/build
+AUTOBUILD    = sphinx-autobuild
 
-# ---- Colours ---------------------------------------------------------------
-BLUE  := \033[36m
-GREEN := \033[32m
-RESET := \033[0m
+# Put it first so that "make" without argument is like "make help".
+help:
+	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-# ---- Default goal ----------------------------------------------------------
-.PHONY: help
-help: ## show this help
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "$(BLUE)%-15s$(RESET) %s\n", $$1, $$2}'
+.PHONY: help Makefile
 
-# ---- Setup -----------------------------------------------------------------
-$(VENV)/bin/activate: requirements.txt
-	@echo "$(GREEN)Creating venv & installing deps...$(RESET)"
-	python3 -m venv $(VENV)
-	$(PIP) install --upgrade pip setuptools wheel
-	$(PIP) install -r $(REQUIREMENTS)
-	touch $(VENV)/bin/activate
+# Catch-all target: route all unknown targets to Sphinx using the new
+# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
+%: Makefile
+	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY: install
-install: $(VENV)/bin/activate ## install dependencies (one-time)
+# Custom targets
+livehtml:
+	@$(AUTOBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" --host 0.0.0.0 --port 8000 --watch "$(SOURCEDIR)"
 
-# ---- Build -----------------------------------------------------------------
-.PHONY: build
-build: install ## build site → docs/build/html
-	$(PYTHON) -m sphinx -b html $(SPHINXOPTS) $(SOURCEDIR) $(BUILDDIR)/html
-	@echo "$(GREEN)✔ Built at file://$(PWD)/$(BUILDDIR)/html/index.html$(RESET)"
+clean:
+	rm -rf "$(BUILDDIR)"
+	rm -rf docs/build
+	find . -type f -name "*.pyc" -delete
+	find . -type d -name "__pycache__" -delete
 
-# ---- Clean -----------------------------------------------------------------
-.PHONY: clean
-clean: ## remove build artefacts
-	rm -rf $(BUILDDIR)
-	@echo "$(GREEN)✔ Build folder cleaned$(RESET)"
+install:
+	pip install -r requirements.txt
 
-# ---- Live preview ----------------------------------------------------------
-.PHONY: serve
-serve: build ## build + serve on http://localhost:8000
-	@echo "$(GREEN)Serving at http://localhost:8000 ...$(RESET)"
-	$(PYTHON) -m http.server -d $(BUILDDIR)/html
+setup: install
+	pre-commit install
+
+# GitHub Pages deployment
+deploy: html
+	ghp-import -n -p -f docs/build/html
+
+# Development server
+dev: livehtml
+
+# Check links
+linkcheck:
+	@$(SPHINXBUILD) -b linkcheck "$(SOURCEDIR)" "$(BUILDDIR)/linkcheck"
+
+# Run tests
+test:
+	pytest tests/ -v --cov=src --cov-report=html --cov-report=term
+
+# Code formatting
+format:
+	black src/ tests/
+	black docs/source/conf.py
+
+# Code linting
+lint:
+	flake8 src/ tests/
+	flake8 docs/source/conf.py
+
+# All checks
+ check: format lint test linkcheck
+
+# Build all formats
+all: html pdf epub
+
+pdf:
+	@$(SPHINXBUILD) -b pdf "$(SOURCEDIR)" "$(BUILDDIR)/pdf"
+
+epub:
+	@$(SPHINXBUILD) -b epub "$(SOURCEDIR)" "$(BUILDDIR)/epub"
