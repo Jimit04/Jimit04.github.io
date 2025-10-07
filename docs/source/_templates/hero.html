@@ -1,17 +1,13 @@
+{# _templates/hero.html #}
 .. raw:: html
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">{{ title }}</h1>
-      <div class="hero-subtitle">
-        <span id="typewriter-text">{{ subtitle }}</span>
-      </div>
-      <p class="hero-description">{{ description }}</p>
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="{{ primary_url }}">{{ primary_label }}</a>
-        <a class="btn btn-secondary" href="{{ secondary_url }}">{{ secondary_label }}</a>
-      </div>
-    </div>
-  </section>
-
-
+   <section>
+     <h1>{{ data.title }}</h1>
+     <p><strong id="typewriter-text">{{ data.subtitle }}</strong></p>
+     <p>{{ data.description }}</p>
+     <p>
+       <a class="reference external" href="{{ data.primary_url }}">{{ data.primary_label }}</a>
+       &nbsp;&nbsp;
+       <a class="reference external" href="{{ data.secondary_url }}">{{ data.secondary_label }}</a>
+     </p>
+   </section>

@@ -1,33 +1,29 @@
-.. raw:: html
+{% extends "!layout.html" %}
 
-  {# extends Furo #}
-  {% extends "!layout.html" %}
+{%- block extrahead %}
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+{{ super() }}
+{% endblock %}
 
-  {%- block extrahead %}
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  {{ super() }}
-  {% endblock %}
-
-  {%- block footer %}
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-title">Jimit Vyas</div>
-      <div class="footer-subtitle">CAE & Automation Specialist</div>
-      <div class="footer-links">
-        <a href="{{ pathto('index') }}">Home</a>
-        <a href="{{ pathto('experience') }}">Experience</a>
-        <a href="{{ pathto('portfolio') }}">Portfolio</a>
-        <a href="{{ pathto('contact') }}">Contact</a>
-      </div>
-      <div class="footer-bottom">
-        © 2025 Jimit Vyas. Built with Sphinx & Furo.
-      </div>
+{%- block footer %}
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-title">Jimit Vyas</div>
+    <div class="footer-subtitle">CAE & Automation Specialist</div>
+    <div class="footer-links">
+      <a href="{{ pathto('index') }}">Home</a>
+      <a href="{{ pathto('experience') }}">Experience</a>
+      <a href="{{ pathto('portfolio') }}">Portfolio</a>
+      <a href="{{ pathto('contact') }}">Contact</a>
     </div>
-  </footer>
-  {{ super() }}
-  {% endblock %}
+    <div class="footer-bottom">
+      © 2025 Jimit Vyas. Built with Sphinx.
+    </div>
+  </div>
+</footer>
+{% endblock %}
 
 

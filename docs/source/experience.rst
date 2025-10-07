@@ -2,6 +2,5 @@ Professional Experience
 =======================
 
 .. jinja:: experiences
-   :file: _templates/timeline.html
-
-
+   
+   {% include "_templates/timeline.html" %}

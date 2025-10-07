@@ -1,20 +1,11 @@
+{# _templates/project-grid.html #}
 .. raw:: html
 
-  <section class="portfolio-grid">
-    {% for p in projects %}
-    <div class="project-card">
-      <div class="project-icon">{{ p.icon }}</div>
-      <h3>{{ p.title }}</h3>
-      <p>{{ p.summary }}</p>
-      <div class="tech-badges">
-        {% for t in p.tech %}<span class="tech-badge">{{ t }}</span>{% endfor %}
-      </div>
-      <div class="project-footer">
-        <span>{{ p.footer[0] }}</span>
-        <span class="impact">{{ p.footer[1] }}</span>
-      </div>
-    </div>
-    {% endfor %}
-  </section>
-
-
+   <ul>
+   {% for p in data %}
+     <li>
+       <strong>{{ p.title }}</strong> – {{ p.summary }}<br>
+       Tech: {{ p.tech | join(', ') }}
+     </li>
+   {% endfor %}
+   </ul>

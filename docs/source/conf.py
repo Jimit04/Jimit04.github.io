@@ -17,32 +17,6 @@ def load_yaml(path: Path):
 HERE = Path(__file__).parent
 brand = load_yaml(HERE / '_data' / 'branding.yaml')
 
-html_theme_options = {
-    "sidebar_hide_name": True,
-    "light_css_variables": {
-        "color-brand-primary": brand['colors']['primary'],
-        "color-brand-content": brand['colors']['secondary'],
-        "color-sidebar-background": brand['colors']['highlight'],
-        "color-link": brand['colors']['accent'],
-        "color-link--hover": brand['colors']['primary'],
-    },
-    "dark_css_variables": {
-        "color-brand-primary": brand['dark_mode']['primary'],
-        "color-brand-content": brand['dark_mode']['secondary'],
-        "color-sidebar-background": brand['dark_mode']['highlight'],
-        "color-link": brand['dark_mode']['accent'],
-        "color-link--hover": brand['dark_mode']['primary'],
-    },
-    "footer_icons": [
-        {
-            "name": item['name'],
-            "url": item['url'],
-            "html": item['icon'],
-        }
-        for item in brand['social']
-    ],
-}
-
 # -- Data layer --------------------------------------------------------------
 data = {
     'experiences': load_yaml(HERE / '_data' / 'experience.yaml'),
@@ -81,7 +55,6 @@ jinja_contexts = {
     for name, payload in data.items()
 }
 
-
 # -- Project information -----------------------------------------------------
 project = 'Jimit Vyas'
 copyright = '2025, Jimit Vyas'
@@ -103,7 +76,7 @@ master_doc = 'index'
 todo_include_todos = True
 
 # -- HTML output -------------------------------------------------------------
-html_theme = 'furo'
+templates_path = ['_templates']
 html_static_path = ['_static']
 html_css_files = ['css/custom.css']
 html_js_files = [
@@ -112,3 +85,10 @@ html_js_files = [
     'js/portfolio.js',
     'js/contact.js',
 ]
+
+def setup(app):
+    from sphinx.util import logging
+    logger = logging.getLogger(__name__)
+    app.connect('builder-inited', lambda _: logger.info(
+        'TEMPLATE PATHS = %s', app.config.templates_path
+    ))

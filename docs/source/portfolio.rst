@@ -2,6 +2,5 @@ Technical Portfolio
 ===================
 
 .. jinja:: projects
-   :file: _templates/project-grid.html
    
-   
+   {% include "_templates/project-grid.html" %}
