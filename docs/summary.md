@@ -1,0 +1,3 @@
+### <i class="fas fa-user"></i> Professional Summary
+
+Engineering professional with 10+ years of experience in Structural FEA, CAE Process Automation, and AI–CAE Integration. Adept at leveraging Python, TCL, and Generative AI (LLMs) to streamline workflows and drive data driven insights. Proven expertise in developing Surrogate Models (ROM) and deploying solutions to accelerate validation in Automotive, Off-Highway and Mining industries. Skilled in cross-functional collaboration and team leadership, transforming traditional simulation teams into efficient, technically sound units through standardization and mentoring.
