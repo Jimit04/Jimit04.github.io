@@ -73,7 +73,8 @@ Gujarat Technological University, Gujarat
 - **CAD & PLM:** Creo + Windchill, NX + Teamcenter.
 
 ## Certifications & Technical Trainings
-- **LinkedIn Learning:** Python Essential Training, Advanced Python, Python for Engineers and Scientists, Automation, OOP, Python Code Challenges
+- **Google Cloud Asia Pacific:** Cloud Technical Series - Gemini at Work Edition
+- **LinkedIn Learning:** Deep Learning with TensorFlow: Insights and Innovations, Machine Learning with Scikit-Learn, Python Essential Training, Advanced Python, Python for Engineers and Scientists, Automation, OOP, Python Code Challenges
 - **SoloLearn:** Python Core, Python for Data Science
 - **Hands‑On Tool Training:** ANSYS, SpaceClaim, Simufact
 - **DoE & Simulation Process:** Parametric Modeling & DoE in ANSYS Workbench

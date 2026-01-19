@@ -1,5 +1,8 @@
 ### <i class="fas fa-certificate"></i> Certifications
 
+- Cloud Technical Series - Gemini at Work Edition (Google Cloud Asia Pacific)
+- Deep Learning with TensorFlow: Insights and Innovations (LinkedIn)
+- Machine Learning with Scikit-Learn (LinkedIn)
 - Python Essential Training (LinkedIn)
 - Advanced Python (LinkedIn)
 - Python for Engineers and Scientists
