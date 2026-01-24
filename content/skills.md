@@ -15,7 +15,6 @@
 - Git
 - Docker
 - SQL
-- MLOps
 
 #### Simulation & FEA Tools
 - Altair HyperWorks
