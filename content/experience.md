@@ -5,9 +5,9 @@
 
 - Lead structural FEA for Super Premium NPD projects, driving simulation-based durability/performance validation and correlating results with physical tests through cross-functional DVP execution.
 - **AI-Driven Workflow Automation:**
-    - Developed a RAG based knowledge system (FastAPI + Ollama) to retrieve historical DVPs and simulation insights, significantly reducing engineering query time.
+    - Developed a RAG based knowledge system to retrieve historical DVPs and simulation insights, significantly reducing engineering query time.
     - Architected Python middleware integrating LLMs with CAE pre-processors, enabling natural-language control of meshing, loadcase setup, post-processing, and reporting.
-- Identify workflow bottlenecks and introduce Reduced Order Models (ROM) where applicable to improve simulation efficiency and throughput.
+- Identify workflow bottlenecks and introduce ML surrogate models where applicable to improve simulation efficiency and throughput.
 - **Standardization:** Enforced standardized CAE workflows via custom Python/TCL tools, creating a structured data pipeline, essential for future Machine Learning model training.
 - Deliver automation led process improvements achieving >60% reduction in CAE turnaround time.
 - Mentor junior engineers on simulation, scripting, and validation best practices.
@@ -40,7 +40,7 @@
 #### CAE Engineer / Research Engineer
 **Freelancer** _Aug 2015 – Nov 2017_
 
-- Designed a 3‑DOF robotic arm (30 kg payload, 1 m reach) for packaging applications.
+- Designed a 3‑DOF robotic arm (30kg payload, 1m max reach) for packaging applications.
 - Developed a 3‑axis force sensor using strain gauges for robotic joint feedback.
 - Analyzed natural fibre composite beams via analytical modeling and physical testing.
 - Completed multiple simulation and prototyping projects, establishing foundational CAE and validation skills.

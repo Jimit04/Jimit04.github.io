@@ -1,19 +1,19 @@
 ### <i class="fas fa-code"></i> Technical Skills
 
 #### AI/ML & Data Science
+- Surrogate modeling
+- DoE-driven ML
 - LLM integration
 - Scikit-learn
 - TensorFlow
-- Surrogate modeling
-- DoE-driven ML
-- Feature engineering
+- PyTorch
 
 #### Software Dev & Deployment
 - Python
 - FastAPI
-- REST APIs
 - Git
 - Docker
+- batch scripting
 - SQL
 
 #### Simulation & FEA Tools
@@ -26,7 +26,7 @@
 
 #### CAE Automation
 - HyperWorks Tcl/Python API
-- ANSYS ACT/APDL
+- ANSYS ACT
 - VCollab Python API
 - Workflow automation
 
