@@ -5,8 +5,10 @@
 - Machine Learning with Scikit-Learn (LinkedIn)
 - Python Essential Training (LinkedIn)
 - Advanced Python (LinkedIn)
-- Python for Engineers and Scientists
-- Python Core & Data Science (SoloLearn)
+- Python for Engineers and Scientists (LinkedIn)
+- Python Core (SoloLearn)
+- Python for Data Science (SoloLearn)
 - ANSYS, SpaceClaim, Simufact Training
 - Parametric Modeling & DoE in ANSYS
-- Six Sigma Training
+- VAVE Training
+- Six Sigma & Taguchi Methods Training

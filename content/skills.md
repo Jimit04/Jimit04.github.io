@@ -15,20 +15,23 @@
 - Docker
 - batch scripting
 - SQL
+- PBS/SLURM
 
-#### Simulation & FEA Tools
+#### Simulation Tools
 - Altair HyperWorks
 - ANSYS Workbench
 - Abaqus
 - MSC Nastran
 - MSC Adams
 - Creo Simulate
+- Simufact Welding
 
 #### CAE Automation
 - HyperWorks Tcl/Python API
-- ANSYS ACT
 - VCollab Python API
+- ANSYS ACT
 - Workflow automation
+- Generative AI for Engineering
 
 #### Simulation Domains
 - Structural FEA
@@ -36,6 +39,7 @@
 - DEM
 - Structural Optimization
 - DoE
+- Fatigue and Durability
 
 #### CAD & PLM
 - Creo + Windchill

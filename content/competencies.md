@@ -7,5 +7,4 @@
 - **Design Optimization:** Topology, Topography, Free size, Gauge, Shape & Parametric Optimization
 - **Multi-Physics / Dynamics:** MBD, DEM, Analytical Methods
 - **Cross-Functional Collaboration:** Agile delivery, Stakeholder management
-- **Technical Leadership:** Mentoring, Cross-Functional Delivery
-- **Technical Documentation & Presentations:** Knowledge sharing & Best practices
+- **Technical Leadership:** Mentoring, Knowledge sharing 
