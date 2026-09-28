@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config.name }} - {{ config.title }}</title>
+    <meta name="description" content="Resume of {{ config.name }} - {{ config.title }}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="resume-container">
+        <!-- Floating Download Button -->
+        <a href="resume.pdf" class="download-btn" download="Resume_JimitVyas.pdf" title="Download PDF Resume">
+            <i class="fas fa-file-pdf"></i> Download PDF
+        </a>
+
+        <header class="resume-header">
+            <div class="header-content">
+                <h1>{{ config.name }}</h1>
+                <h2>{{ config.title }}</h2>
+                <div class="contact-info">
+                    <a href="mailto:{{ config.email }}"><i class="fas fa-envelope"></i> {{ config.email }}</a>
+                    <a href="tel:{{ config.phone.replace(' ', '') }}"><i class="fas fa-phone"></i> {{ config.phone
+                        }}</a>
+                    <a href="{{ config.linkedin_url }}" target="_blank"><i class="fab fa-linkedin"></i> {{
+                        config.linkedin_handle }}</a>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> {{ config.location }}</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content-wrapper">
+            <!-- Left Sidebar -->
+            <aside class="sidebar">
+                <section class="skills-section">
+                    {{ content.skills }}
+                </section>
+
+                <section class="education-section">
+                    {{ content.education }}
+                </section>
+
+                <section class="certifications-section">
+                    {{ content.certifications }}
+                </section>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-column">
+                <section class="summary-section">
+                    {{ content.summary }}
+                </section>
+
+                <section class="core-competencies-section">
+                    {{ content.competencies }}
+                </section>
+
+                <section class="experience-section">
+                    {{ content.experience }}
+                </section>
+            </main>
+        </div>
+
+        <footer class="resume-footer">
+            <p>&copy;
+                <script>document.write(new Date().getFullYear())</script> {{ config.name }}. All rights reserved.
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
